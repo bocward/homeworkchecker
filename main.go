@@ -13,7 +13,7 @@ import (
 
 func main() {
 	log.Println("Starting app....")
-	p := "images/loading.png"
+	p := "/home/bocward/go_workspace/src/github.com/bocward/homeworkchecker/images/loading.png"
 	hwprocess.Process(&p)
 
 	// r := gin.Default()
