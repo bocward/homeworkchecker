@@ -7,14 +7,18 @@ import (
 	"net/http"
 	"os"
 
+	"github.com/bocward/homeworkchecker/hwprocess"
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
 	log.Println("Starting app....")
-	r := gin.Default()
-	r.POST("/homework", uploadImage)
-	r.Run() // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
+	p := "images/loading.png"
+	hwprocess.Process(&p)
+
+	// r := gin.Default()
+	// r.POST("/homework", uploadImage)
+	// r.Run() // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
 }
 
 func uploadImage(c *gin.Context) {
